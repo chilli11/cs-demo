@@ -9,6 +9,6 @@
       <span class="checkbox-link" {{on "click" @toggleSelected}}></span>
     </div>
     <div class="selected">Selected {{@selectedCount}}</div>
-    <div class="download"><img height="12" src="/images/download.svg" /><span role="link" {{on "click" @downloadAction}}>Download Selected</span></div>
+    <div class="download" {{on "click" @downloadAction}}><img height="12" src="/images/download.svg" /><span role="link">Download Selected</span></div>
   </div>
 </div>
