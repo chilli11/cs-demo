@@ -1,0 +1,76 @@
+.table {
+  max-width: 1280px;
+  min-width: 1024px;
+  box-shadow: 0 0 5px #CCC;
+  margin: 30px auto;
+  .row {
+    display: flex;
+    padding: 8px 4px;
+    border-top: 1px solid #DDD;
+
+    > div {
+      width: 150px;
+      flex-shrink: 1;
+      flex-grow: 0;
+      &.path, &.download {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      &.checkbox-cell {
+        width: 50px;
+        position: relative;
+        .checkbox-link {
+          display: block;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 24px;
+          z-index: 1;
+          position: absolute;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .actions{
+    img {
+      height: 13px;
+      margin-right: 8px;
+    }
+    span[role="link"] {
+      cursor: pointer;
+    }
+   }
+  .header {
+    font-size: 1em;
+  }
+  .body {
+    font-size: .8em;
+    .row {
+      cursor: pointer;
+      &.disabled {
+        cursor: not-allowed;
+      }
+      &.selected {
+        background: #DDD;
+        &:hover {
+          background: #CCC;
+        }
+      }
+      &:hover:not(.selected) {
+        background: #EEE;
+      }
+    }
+    .status-icon {
+      height: 16px;
+      width: 16px;
+      border-radius: 20px;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      &.available {
+        background: green;
+      }
+    }
+  }
+}

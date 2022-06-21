@@ -1,0 +1,26 @@
+<div class="table">
+  <DataTable::Actions
+    @toggleSelected={{this.toggle}}
+    @allSelected={{this.allSelected}}
+    @indeterminate={{this.indeterminate}}
+    @selectedCount={{this.selectedCount}}
+    @downloadAction={{this.download}}
+  />
+  <div class="header">
+    <div class="row">
+      <div class="checkbox-cell"></div>
+      <div class="name">Name</div>
+      <div class="device">Device</div>
+      <div class="path">Path</div>
+      <div class="status"></div>
+    </div>
+  </div>
+  <div class="body">
+    {{#each this.dataService.data as |item|}}
+      <DataTable::Row
+        @item={{item}}
+        @toggleAsset={{fn this.toggleAsset item}}
+      />
+    {{/each}}
+  </div>
+</div>
