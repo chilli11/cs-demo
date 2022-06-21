@@ -9,7 +9,7 @@ module('Integration | Component | data-table', function (hooks) {
   test('it renders', async function (assert) {
     let service = this.owner.lookup('service:data-service');
 
-    await render(hbs`<DataTable @model={{service.data}} />`);
+    await render(hbs`<DataTable />`);
     service.getData();
     await settled();
 

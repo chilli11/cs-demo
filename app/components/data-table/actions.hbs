@@ -8,7 +8,7 @@
       />
       <span class="checkbox-link" {{on "click" @toggleSelected}}></span>
     </div>
-    <div class="selected">Selected {{@selectedCount}}</div>
+    <div class="selected">{{if @selectedCount (concat "Selected " @selectedCount) "None Selected"}}</div>
     <div class="download" {{on "click" @downloadAction}}><img height="12" src="/images/download.svg" /><span role="link">Download Selected</span></div>
   </div>
 </div>

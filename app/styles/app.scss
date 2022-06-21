@@ -31,6 +31,18 @@
         }
       }
     }
+    .status-icon {
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+      border-radius: 20px;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      &.available {
+        background: green;
+      }
+    }
   }
   .actions{
     img {
@@ -59,17 +71,6 @@
       }
       &:hover:not(.selected) {
         background: #EEE;
-      }
-    }
-    .status-icon {
-      height: 16px;
-      width: 16px;
-      border-radius: 20px;
-      display: inline-block;
-      position: relative;
-      top: 3px;
-      &.available {
-        background: green;
       }
     }
   }
